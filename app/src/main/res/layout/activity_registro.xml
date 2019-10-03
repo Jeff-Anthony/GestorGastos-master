@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20sp"
+    tools:context=".activities.RegistroActivity">
+
+    <TextView
+        android:id="@+id/encabezado2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:text="Registrar Ingresos / Egresos"/>
+
+
+
+
+    <EditText
+        android:id="@+id/monto1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/encabezado2"
+        android:inputType="number"
+        android:hint="Monto"
+        />
+
+    <LinearLayout
+        android:id="@+id/egreso_ingreso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/monto1">
+
+<RadioGroup
+    android:id="@+id/group_in_eg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+  <RadioButton
+      android:id="@+id/radio_ingresos"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Ingreso"/>
+
+   <RadioButton
+       android:id="@+id/radio_egresos"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Egreso"/>
+
+</RadioGroup>
+
+    </LinearLayout>
+
+   <LinearLayout
+       android:id="@+id/tipos"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:layout_marginTop="20dp"
+       android:layout_below="@+id/egreso_ingreso">
+
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:textStyle="bold"
+           android:textSize="20dp"
+           android:text="Tipo de Cuenta"/>
+
+       <Spinner
+           android:id="@+id/spinner"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_margin="20dp"
+           android:entries="@array/tipos">
+
+
+
+
+       </Spinner>
+   </LinearLayout>
+
+    <Button
+        android:id="@+id/Registro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tipos"
+        android:text="Registrar"/>
+
+
+</RelativeLayout>

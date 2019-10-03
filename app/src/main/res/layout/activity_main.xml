@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20sp"
+    tools:context=".activities.MainActivity">
+
+    <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+
+        >
+
+   <TextView
+       android:id="@+id/encabezado"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:textStyle="bold"
+       android:textSize="20dp"
+       android:layout_marginBottom="50dp"
+       android:text="Contabilidad de Ingresos /Egresos"/>
+
+     <LinearLayout
+         android:id="@+id/enlaces_ahorros"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="50dp"
+         android:orientation="horizontal">
+
+
+         <ImageView
+             android:id="@+id/imageView1"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             app:srcCompat="@android:drawable/ic_search_category_default" />
+
+         <Button
+             android:id="@+id/button_ahorro"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Saldo Actual Ahorro"
+             style="@style/Widget.MaterialComponents.Button.TextButton.Dialog"
+             android:textSize="15dp" />
+
+         <TextView
+             android:id="@+id/acumulado_ahorro"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:padding="20dp"
+             android:text="S/ 1200"
+             android:textSize="15dp"
+             android:textStyle="bold" />
+
+     </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/enlaces_credito"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/enlaces_ahorros"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@android:drawable/ic_search_category_default" />
+
+            <Button
+                android:id="@+id/button_credito"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.Button.TextButton.Dialog"
+                android:text="Saldo Actual Crédito"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/acumulado_credito"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:text="S/2000"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/enlaces_efectivo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/enlaces_credito"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@android:drawable/ic_search_category_default" />
+
+            <Button
+                android:id="@+id/button_efectivo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Saldo Actual Efectivo"
+                style="@style/Widget.MaterialComponents.Button.TextButton.Dialog"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/acumulado_efectivo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:text="S/ 120"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/enlaces_efectivo"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:text="Proporción Ingresos / Egresos"
+                />
+
+            <ProgressBar
+                android:id="@+id/progressbar"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:min="0"
+                android:max="100"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                />
+
+        </LinearLayout>
+
+        <android.support.design.widget.FloatingActionButton
+
+            android:id="@+id/floatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="16dp"
+            android:clickable="true"
+            app:srcCompat="@android:drawable/ic_input_add" />
+
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>
